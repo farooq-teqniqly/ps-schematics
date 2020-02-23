@@ -1,4 +1,4 @@
-import { Rule, SchematicContext, Tree, apply, url, mergeWith, MergeStrategy, move, template } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, apply, url, mergeWith, MergeStrategy, move, template, filter } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
 
 // You don't have to export the function as default. You can also have more than one rule factory
@@ -14,9 +14,20 @@ export function stepperExample(options: any): Rule {
       template({
         ...strings,
         ...options
-      })]);
+      }),
+      specFilter(options)]);
 
     const rule = mergeWith(newTree, MergeStrategy.Default);
     return rule(tree, context);
   };
+}
+
+function specFilter(options: any): Rule {
+  if (options.spec === 'false') {
+    return filter(path => {
+      return !path.match(/\.spec\.ts$/) && !path.match(/test\.ts$/);
+    });
+  }
+
+  return filter(path => !path.match(/test\.ts$/));
 }
