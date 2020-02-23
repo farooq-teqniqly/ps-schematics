@@ -11,6 +11,11 @@ describe('stepper-example', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
     const tree = await runner.runSchematicAsync('stepper-example', {name: 'test' }, Tree.empty()).toPromise();
 
-    expect(tree.files).toEqual([]);
+    expect(tree.files).toEqual([
+      '/test/stepper-overview-example.component.html',
+      '/test/stepper-overview-example.component.scss',
+      '/test/stepper-overview-example.component.spec.ts',
+      '/test/stepper-overview-example.component.ts'
+    ]);
   });
 });

@@ -7,6 +7,11 @@
       "type": "string",
       "description": "The name of the component."
     },
+    "path": {
+      "type": "string",
+      "description": "The path to create the Material Stepper Example under relative to the workspace root.",
+      "default": ""
+    },
     "spec": {
       "type":"string",
       "description": "Specifies if a spec file is generated.",
