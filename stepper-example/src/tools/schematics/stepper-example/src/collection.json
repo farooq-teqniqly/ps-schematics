@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "stepper-example": {
+      "description": "A blank schematic.",
+      "factory": "./stepper-example/index#stepperExample",
+      "schema": "./stepper-example/schema.json"
+    }
+  }
+}
