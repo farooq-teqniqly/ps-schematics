@@ -3,11 +3,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-<%=dasherize(name)%>',
-  templateUrl: './<%=dasherize(name)%>.component.html',
-  styleUrls: ['./<%=dasherize(name)%>.component.scss']
+  selector: 'app-test-stepper',
+  templateUrl: './test-stepper.component.html',
+  styleUrls: ['./test-stepper.component.scss']
 })
-export class <%=classify(name)%>Component implements OnInit {
+export class TestStepperComponent implements OnInit {
   formGroup: FormGroup;
   isNonLinear = false;
   isNonEditable = false;

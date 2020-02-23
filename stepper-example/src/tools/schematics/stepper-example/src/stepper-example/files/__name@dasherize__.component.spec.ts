@@ -1,24 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepperOverviewExampleComponent } from './stepper-overview-example.component';
+import { <%=classify(name)%>Component } from './<%=dasherize(name)%>.component';
 
-describe('StepperOverviewExampleComponent', () => {
-  let component: StepperOverviewExampleComponent;
-  let fixture: ComponentFixture<StepperOverviewExampleComponent>;
+describe('<%=classify(name)%>Component', () => {
+  let component: <%=classify(name)%>Component;
+  let fixture: ComponentFixture<<%=classify(name)%>Component>;
 
-  /* beforeEach(async(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StepperOverviewExampleComponent ]
+      declarations: [ <%=classify(name)%>Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepperOverviewExampleComponent);
+    fixture = TestBed.createComponent(<%=classify(name)%>Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
- */
+
   xit('should create', () => {
     expect(component).toBeTruthy();
   });
